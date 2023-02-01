@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
   end
   
   def create
+    puts("ここを見ろ")
+    p params
     email = params[:session][:email].downcase
     password = params[:session][:password]
     if login(email, password)
