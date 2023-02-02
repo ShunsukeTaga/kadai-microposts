@@ -19,6 +19,6 @@
         <li class="nav-item"><a href="<%= likes_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(likes_user_path(@user)) %>">Favorites  <span class="badge bg-secondary"><%= @count_islikes %></span></a></li>
       <% end %>
     </ul>
-    <%= render 'users', users: @followers %>
+    <%= render 'microposts/microposts', microposts: @islikes %>
   </div>
 </div>
